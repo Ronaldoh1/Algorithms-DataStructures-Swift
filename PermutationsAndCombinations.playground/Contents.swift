@@ -22,3 +22,18 @@ func numberOfPermutations(_ n: Int, k: Int) -> Int {
 }
 
 numberOfPermutations(5, k: 3)
+
+
+
+//Combinations
+
+//Total number of combinations = permutations(n,k)/ factorial(k)
+//The C(n, k) function counts the number of ways to choose k things out of n possibilities. That's why it's also called "n-choose-k". (A fancy mathematical term for this number is "binomial coefficient".)
+
+
+func combinations(_ n: Int, _ k: Int) -> Int {
+    return numberOfPermutations(n, k: k) / factorial(k)
+}
+
+
+combinations(5, 3)
