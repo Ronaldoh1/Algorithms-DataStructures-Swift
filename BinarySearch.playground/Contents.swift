@@ -11,6 +11,7 @@ import UIKit
     * This repeats until the search key is found
  */
 
+// Performance O(Logn)
 
 func binarySearch<T: Comparable>(_ array: [T], key: T, range: Range<Int>) -> Int? {
 
@@ -35,9 +36,7 @@ func binarySearch<T: Comparable>(_ array: [T], key: T, range: Range<Int>) -> Int
 }
 
 
+let numbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67]
 
-
-
-
-let numbers = [11, 59, 3, 2, 53, 17, 31, 7, 19, 67, 47, 13, 37, 61, 29, 43, 5, 41, 23]
+binarySearch(numbers, key: 43, range: 0 ..< numbers.count)  // gives 13
 
